@@ -7,6 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# gem 'sqlite3'
 gem 'rails', '~> 5.1.6'
 # Use sqlite3 as the database for Active Record
 gem 'shoulda-matchers', '~> 3.1'
