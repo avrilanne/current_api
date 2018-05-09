@@ -4,7 +4,6 @@ Current Api Challenge
 
 How to Use:
 
-
 Heroku endpoint URL = https://dunleavy-current-api-challenge.herokuapp.com/visits?
 
 Example requests:
@@ -16,7 +15,6 @@ Example requests:
  - This is for finding a visit with both user_id and search_string
 
 * https://dunleavy-current-api-challenge.herokuapp.com/visits?user_id=1&search_string=blahblah
-
 
  - This is for finding a visit with visit_id
 

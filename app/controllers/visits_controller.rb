@@ -1,5 +1,4 @@
 class VisitsController < ApplicationController
-
   def index
     visit_params
     if visit_params.include?(:visit_id)
