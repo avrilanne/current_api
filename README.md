@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Current Api Challenge
 
-Things you may want to cover:
+How to Use:
 
-* Ruby version
 
-* System dependencies
+Heroku endpoint URL = https://dunleavy-current-api-challenge.herokuapp.com/visits?
 
-* Configuration
+Example requests:
 
-* Database creation
+ - This is for creating a visit (post - curl, postman, ect. httpie)
 
-* Database initialization
+ * https://dunleavy-current-api-challenge.herokuapp.com/visits?user_id=1&name=monaco
 
-* How to run the test suite
+ - This is for finding a visit with both user_id and search_string
 
-* Services (job queues, cache servers, search engines, etc.)
+* https://dunleavy-current-api-challenge.herokuapp.com/visits?user_id=1&search_string=blahblah
 
-* Deployment instructions
 
-* ...
+ - This is for finding a visit with visit_id
+
+ * https://dunleavy-current-api-challenge.herokuapp.com/visits?visit_id=1
+
+
