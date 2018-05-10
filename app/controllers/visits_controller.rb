@@ -25,7 +25,7 @@ class VisitsController < ApplicationController
   end
 
   def find_by_user_id_and_search_string
-    user_visits = Visit.find_by(user_id: visit_params['user_id'])
+    user_visits = Visit.where(user_id: visit_params['user_id'])
     return @visit = [] if user_visits == nil
     if user_visits.class != Visit
       user_visits = user_visits.order(:created_at).limit(5)
@@ -34,7 +34,7 @@ class VisitsController < ApplicationController
   end
 
   def try_match(user_visits)
-    fz = FuzzyMatch.new([user_visits], read: :name)
+    fz = FuzzyMatch.new([user_visits][0], read: :name)
     [fz.find(visit_params['search_string'])]
   end
 end
