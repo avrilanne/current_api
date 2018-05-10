@@ -10,7 +10,7 @@ class VisitsController < ApplicationController
   end
 
   def create
-    @visit = Visit.create!(visit_params)
+    @visit = Visit.create!(user_id: visit_params['user_id'], name: visit_params['name'])
     json_response(@visit, :created)
   end
 
@@ -19,6 +19,7 @@ class VisitsController < ApplicationController
   def visit_params
     params.permit(:user_id, :name, :visit_id, :search_string)
   end
+
 
   def set_visit
     @visit = Visit.find(params[:visit_id])
