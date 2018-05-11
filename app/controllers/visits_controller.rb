@@ -36,6 +36,6 @@ class VisitsController < ApplicationController
 
   def try_match(user_visits)
     fz = FuzzyMatch.new([user_visits][0], read: :name)
-    [fz.find(visit_params['search_string'])]
+    [fz.find_all(visit_params['search_string'])]
   end
 end
